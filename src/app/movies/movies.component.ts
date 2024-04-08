@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Movies } from "../movies.datasource";
 
 @Component({
     selector: 'movies',
@@ -8,4 +9,6 @@ import { Component } from "@angular/core";
 
 export class MoviesComponent{
 
+    title = "Movie List"
+    movies= Movies;
 }
