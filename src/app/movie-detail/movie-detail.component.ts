@@ -3,6 +3,7 @@ import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'movie-detail',
@@ -29,7 +30,9 @@ export class MovieDetailComponent {
     this.movieService.getMovie(id).subscribe(movie => this.movie = movie)
   }
 
-  save():void{
-    this.movieService.update(this.movie).subscribe(()=>{ this.location.back();})
+  save(): void {
+    this.movieService.update(this.movie).subscribe(() => { this.location.back(); })
   }
+
+ 
 }
